@@ -1,0 +1,21 @@
+import random
+
+# Random number generate karega (1 se 100)
+number = random.randint(0, 9)
+attempts = 0
+
+print("Welcome to Number Guessing Game!")
+print("Guess a number between 1 and 100")
+
+while True:
+    guess = int(input("Enter your guess: "))
+    attempts += 1
+
+    if guess < number:
+        print("My number is greater than the number you guessed. try again",end="\n\n")
+    elif guess > number:
+        print("My number is smaller than the number you guessed.try again",end="\n\n")
+    else:
+        print("Congratulations! You guessed the number 🎉")
+        print("Total attempts:", attempts)
+        break
